@@ -1,3 +1,4 @@
+// Header
 const headerMenu = document.querySelectorAll(".header-menu");
 
 // Add class "active" to selected menu
@@ -7,4 +8,31 @@ headerMenu.forEach((selectedMenu) => {
 
     selectedMenu.classList.add("active");
   });
+});
+
+// Hamburger menu interactions
+const hamburgerMenuIcon = document.getElementsByClassName(
+  "hamburger-menu-icon"
+);
+const headerNavbar = document.getElementsByClassName("header-navbar");
+const mobileHeaderCloseBtn = document.getElementsByClassName(
+  "mobile-header-close-btn"
+);
+
+hamburgerMenuIcon[0].addEventListener("click", () => {
+  headerNavbar[0].style.right = "0";
+
+  headerNavbar[0].classList.add("header-navbar-animation");
+  setTimeout(() => {
+    headerNavbar[0].classList.remove("header-navbar-animation");
+  }, 600);
+});
+
+mobileHeaderCloseBtn[0].addEventListener("click", () => {
+  headerNavbar[0].style.right = "-320px";
+
+  headerNavbar[0].classList.add("header-navbar-animation");
+  setTimeout(() => {
+    headerNavbar[0].classList.remove("header-navbar-animation");
+  }, 600);
 });
