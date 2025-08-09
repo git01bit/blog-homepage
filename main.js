@@ -36,3 +36,22 @@ mobileHeaderCloseBtn[0].addEventListener("click", () => {
     headerNavbar[0].classList.remove("header-navbar-animation");
   }, 600);
 });
+
+// Banner
+const bannersContainer = document.querySelectorAll(".banner");
+
+bannersContainer.forEach((bannerSelected) => {
+  bannerSelected.addEventListener("click", () => {
+    bannersContainer.forEach((banner) => {
+      banner.classList.replace("active-banner", "deactive-banner");
+      banner.classList.add("hide");
+
+      setTimeout(banner.classList.add("banner-animation"), 300);
+    });
+
+    bannerSelected.classList.replace("deactive-banner", "active-banner");
+    setTimeout(() => {
+      bannerSelected.classList.remove("hide");
+    }, 100);
+  });
+});
