@@ -46,6 +46,7 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  min-height: 96px;
   padding: 16px 0 16px 0;
 }
 
@@ -59,7 +60,8 @@ a {
   column-gap: 48px;
 }
 
-.logo {
+.desktop-logo,
+.mobile-logo {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -68,7 +70,8 @@ a {
   color: var(--color-accent) !important;
 }
 
-.logo i {
+.desktop-logo i,
+.mobile-logo i {
   padding-top: 2px;
 }
 
@@ -89,37 +92,41 @@ a {
   transition: all 600ms ease;
 }
 
-.mobile-header-close-btn {
+.mobile-logo-close-btn {
   display: none;
 }
 
-.login-register-desktop-btn {
+.account-search-btns {
   display: flex;
-}
-
-.login-register-desktop-btn,
-.login-register-mobile-btn {
-  justify-content: center;
   align-items: center;
-  column-gap: 4px;
-  padding: 10px 20px;
+  column-gap: 12px;
+}
+
+.search {
+  position: relative;
+}
+
+.search input {
+  width: 192px;
+  padding: 2px 16px;
+  border: 1px solid #000;
   border-radius: 100px;
-  color: #fff !important;
-  background: var(--color-accent);
+  outline: none;
+  transition: all 300ms ease;
 }
 
-.login-register-desktop-btn span,
-.login-register-mobile-btn span {
-  margin-top: -6px;
+.search input::placeholder {
+  color: #000;
 }
 
-.login-register-desktop-btn:hover,
-.login-register-mobile-btn:hover {
-  background: var(--color-accent-hover);
-}
-
-.login-register-mobile-btn {
-  display: none;
+.search button {
+  position: absolute;
+  top: 4px;
+  left: 8px;
+  color: #000;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .hamburger-menu-icon {
@@ -241,14 +248,18 @@ a {
 }
 
 @media (max-width: 1024px) {
+  .desktop-logo {
+    display: none;
+  }
+
   .header-navbar {
     position: absolute;
     flex-direction: column;
-    row-gap: 32px;
+    row-gap: 16px;
     top: 0;
     right: -320px;
-    padding: 64px 32px;
-    width: 240px;
+    padding: 12px 24px;
+    width: 288px;
     height: 100dvh;
     background: #fff;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
@@ -258,28 +269,21 @@ a {
   .header-navbar a.active {
     text-decoration: none;
     border-right: 2px solid var(--color-accent);
-    padding-right: 4px;
+    padding-right: 8px;
   }
 
-  .mobile-header-close-btn {
-    display: block;
-    position: absolute;
-    top: 32px;
-    left: 24px;
-  }
-
-  .login-register-desktop-btn {
-    display: none;
-  }
-
-  .login-register-mobile-btn {
+  .mobile-logo-close-btn {
     display: flex;
-    margin-top: 16px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .search input {
+    width: 144px;
   }
 
   .hamburger-menu-icon {
     display: block;
-    position: absolute;
-    left: 16px;
   }
 }
