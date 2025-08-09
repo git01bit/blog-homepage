@@ -52,6 +52,6 @@ bannersContainer.forEach((bannerSelected) => {
     bannerSelected.classList.replace("deactive-banner", "active-banner");
     setTimeout(() => {
       bannerSelected.classList.remove("hide");
-    }, 100);
+    }, 50);
   });
 });
