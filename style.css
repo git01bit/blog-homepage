@@ -13,7 +13,7 @@
 
 body {
   max-width: 1280px;
-  margin: 16px auto 0 auto;
+  margin: 16px auto;
   padding: 0 16px 0 16px;
   font-size: 1rem;
   font-weight: 400;
@@ -42,6 +42,10 @@ h3 {
 a {
   color: var(--color-accent);
   text-decoration: none;
+}
+
+footer {
+  margin-top: 72px;
 }
 
 /* Header */
@@ -389,6 +393,27 @@ a {
   display: none;
 }
 
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.social-media-icons {
+  display: flex;
+  column-gap: 16px;
+}
+
+.social-media-icons a,
+.copyright-text {
+  color: #aaa;
+}
+
+.copyright-text {
+  font-size: 12px;
+}
+
 /* Responsiveness styles */
 /* Breakpoint: 1024px */
 @media (max-width: 1024px) {
@@ -500,6 +525,11 @@ a {
   .author-date,
   .banner-article-tags {
     align-self: center;
+  }
+
+  .footer-info {
+    flex-direction: column !important;
+    row-gap: 8px;
   }
 }
 
