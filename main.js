@@ -55,3 +55,16 @@ bannersContainer.forEach((bannerSelected) => {
     }, 50);
   });
 });
+
+// Blog post filters section
+const filterTitles = document.querySelectorAll(".filter-titles div");
+
+filterTitles.forEach((selectedFilter) => {
+  selectedFilter.addEventListener("click", () => {
+    filterTitles.forEach((filter) => {
+      filter.classList.remove("active-filter");
+    });
+
+    selectedFilter.classList.add("active-filter");
+  });
+});

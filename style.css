@@ -23,7 +23,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-weight: 700;
 }
 
@@ -33,6 +34,10 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
 }
 
 a {
@@ -116,7 +121,7 @@ a {
 }
 
 .search input::placeholder {
-  color: #707070;
+  color: #aaa;
 }
 
 .search button {
@@ -134,6 +139,7 @@ a {
 }
 
 /* Main */
+/* Banner */
 .banners-container {
   display: flex;
   column-gap: 16px;
@@ -178,10 +184,6 @@ a {
   justify-content: space-between;
   align-items: baseline;
   column-gap: 48px;
-}
-
-.banner-description {
-  margin-top: 16px;
 }
 
 .link-arrow {
@@ -248,6 +250,65 @@ a {
   bottom: -1600px;
 }
 
+/* Blog post filters section */
+.new-section {
+  margin-top: 72px;
+}
+
+.filters-header {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 32px;
+}
+
+.filters-container {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.filter-titles {
+  display: flex;
+  column-gap: 48px;
+  overflow-x: scroll;
+  color: #aaa;
+  cursor: pointer;
+  scrollbar-width: none;
+  height: 35px;
+}
+
+.active-filter {
+  color: #000;
+  text-decoration: underline 2px;
+  text-underline-offset: 12px;
+}
+
+.desktop-read-all-btn {
+  display: flex;
+}
+
+.mobile-read-all-btn {
+  display: none;
+}
+
+.desktop-read-all-btn,
+.mobile-read-all-btn {
+  align-items: center;
+  column-gap: 8px;
+  flex-shrink: 0;
+  padding: 6px 20px;
+  border-radius: 100px;
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+}
+
+/* Responsiveness styles */
+/* Breakpoint: 1024px */
 @media (max-width: 1024px) {
   .desktop-logo {
     display: none;
@@ -302,8 +363,19 @@ a {
     width: 100%;
     height: 10%;
   }
+
+  .desktop-read-all-btn {
+    display: none;
+  }
+
+  .mobile-read-all-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
 }
 
+/* Breakpoint: 768px */
 @media (max-width: 768px) {
   .article-info {
     flex-direction: column;
@@ -311,6 +383,7 @@ a {
   }
 }
 
+/* Breakpoint: 480px */
 @media (max-width: 480px) {
   .link-arrow {
     display: none;
@@ -322,6 +395,7 @@ a {
   }
 }
 
+/* Breakpoint: 400px */
 @media (max-width: 400px) {
   .article-info {
     display: none;
