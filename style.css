@@ -47,7 +47,7 @@ a {
   justify-content: space-between;
   align-items: center;
   min-height: 96px;
-  padding: 16px 0 16px 0;
+  padding: 16px 0;
 }
 
 .header a {
@@ -116,7 +116,7 @@ a {
 }
 
 .search input::placeholder {
-  color: #000;
+  color: #707070;
 }
 
 .search button {
@@ -149,7 +149,7 @@ a {
 .banner img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: none;
 }
 
 .active-banner {
@@ -197,20 +197,20 @@ a {
 
 .author-date {
   display: flex;
-  align-items: center;
+  align-self: self-start;
   column-gap: 32px;
 }
 
 .article-author,
 .article-date {
   display: flex;
-  align-items: center;
   column-gap: 8px;
   font-weight: 100;
 }
 .article-author img {
   width: 32px;
   border-radius: 100%;
+  object-fit: cover;
 }
 
 .article-date-icon {
@@ -225,6 +225,7 @@ a {
 
 .article-tags {
   display: flex;
+  align-self: self-end;
   column-gap: 12px;
 }
 
@@ -232,7 +233,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 32px;
+  min-width: 64px;
   padding: 8px 16px;
   border: 1px solid #fff;
   border-radius: 100px;
@@ -285,5 +286,44 @@ a {
 
   .hamburger-menu-icon {
     display: block;
+  }
+
+  .banners-container {
+    flex-direction: column;
+    row-gap: 16px;
+    height: 800px;
+  }
+
+  .active-banner {
+    height: 100%;
+  }
+
+  .deactive-banner {
+    width: 100%;
+    height: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .article-info {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .link-arrow {
+    display: none;
+  }
+
+  .author-date,
+  .article-tags {
+    align-self: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .article-info {
+    display: none;
   }
 }
