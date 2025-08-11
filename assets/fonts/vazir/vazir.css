@@ -1,24 +1,24 @@
 @font-face {
   font-family: "Vazir";
-  src: url("/assets/fonts/vazir/woff2/Vazir-Thin-FD-WOL-UI.woff2")
+  src: url("./woff2/Vazir-Thin-FD-WOL-UI.woff2")
       format("woff2"),
-    url("/assets/fonts/vazir/woff/Vazir-Thin-FD-WOL-UI.woff") format("woff");
+    url("./woff/Vazir-Thin-FD-WOL-UI.woff") format("woff");
   font-weight: 100;
 }
 
 @font-face {
   font-family: "Vazir";
-  src: url("/assets/fonts/vazir/woff2/Vazir-Regular-FD-WOL-UI.woff2")
+  src: url("./woff2/Vazir-Regular-FD-WOL-UI.woff2")
       format("woff2"),
-    url("/assets/fonts/vazir/woff/Vazir-Regular-FD-WOL-UI.woff") format("woff");
+    url("./woff/Vazir-Regular-FD-WOL-UI.woff") format("woff");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Vazir";
-  src: url("/assets/fonts/vazir/woff2/Vazir-Bold-FD-WOL-UI.woff2")
+  src: url("./woff2/Vazir-Bold-FD-WOL-UI.woff2")
       format("woff2"),
-    url("/assets/fonts/vazir/woff/Vazir-Bold-FD-WOL-UI.woff") format("woff");
+    url("./woff/Vazir-Bold-FD-WOL-UI.woff") format("woff");
   font-weight: 700;
 }
 
